@@ -15,7 +15,19 @@ section {
     color: rgb(221, 218, 218);
     height: 20vh;
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
+    /* Space-Around Distributes items evenly
+    The first item is flush with the start,
+     the last is flush with the end */ 
+    align-items:center;
+}
 
+.score h2 {
+    font-size: 30px;
+}
 
+.score p {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
 }

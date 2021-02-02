@@ -56,6 +56,7 @@ section {
     font-size:20px;
     background: rgb(55, 145, 118);
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .match {
@@ -79,4 +80,14 @@ section {
 
 .player-hand {
     transform: rotateY(180deg);
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeOut {
+    opacity: 1;
+    pointer-events: all;
 }

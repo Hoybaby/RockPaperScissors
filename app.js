@@ -15,4 +15,9 @@ const game = () => {
         })
     }
 
+    startGame();
 }
+
+//start the game function
+
+game();

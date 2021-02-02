@@ -8,4 +8,14 @@
 section {
     height: 100vh;
     background-color: #5A69BB ;
+    font-family: sans-serif;
+}
+
+.score {
+    color: rgb(221, 218, 218);
+    height: 20vh;
+    display: flex;
+    /* justify-content: space-around; */
+
+
 }

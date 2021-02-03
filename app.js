@@ -31,6 +31,11 @@ const game = () => {
                 const computerChoice = computerOptions[computerNumber]
                 console.log(computerChoice)
                 //we will call the comparing hands to see who actually won the game
+                compareHands();
+
+                //updating the images so it looks like the choice you got
+                playerHand.src = `./assets/${this.textContent}.png`
+                computerHand.src = `./assets/${computerChoice}.png`
             })
         });
     };

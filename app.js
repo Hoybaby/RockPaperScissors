@@ -22,15 +22,14 @@ const game = () => {
         const playerHand = document.querySelector('.player-hand');
         const computerHand = document.querySelector('.computer-hand');
         const hands = document.querySelectorAll('.hands img');
-
-        hands.forEach(hand => {
-            hand.addEventListener('animationed', function() { // normal function because i want access to this
-                this.style.animation=''; //every time the animation ends this will run which will reset it and make it so every click it does the animation after.
-            })
-        })
-
         //computer Hands/choices to fight against player
         const computerOptions = ["rock", "paper", "scissors"];
+
+        hands.forEach(hand => {
+            hand.addEventListener('animationend', function() {
+                this.style.animation = '';
+            })
+        })
 
         options.forEach(option => {
             option.addEventListener('click', function() {

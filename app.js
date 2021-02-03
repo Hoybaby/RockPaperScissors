@@ -36,6 +36,9 @@ const game = () => {
                 //updating the images so it looks like the choice you got
                 playerHand.src = `./assets/${this.textContent}.png`
                 computerHand.src = `./assets/${computerChoice}.png`
+
+                playerHand.style.animation = "shakePlayer 2s ease";
+                computerHand.style.animation = "shakeComputer 2s ease";
             })
         });
     };

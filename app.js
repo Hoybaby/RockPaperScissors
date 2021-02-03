@@ -37,12 +37,16 @@ const game = () => {
                 const computerChoice = computerOptions[computerNumber]
                 console.log(computerChoice)
                 //we will call the comparing hands to see who actually won the game
-                compareHands(this.textContent, computerChoice);
+                
+                setTimeout(()=> {
+                    compareHands(this.textContent, computerChoice);
 
                 //updating the images so it looks like the choice you got
-                playerHand.src = `./assets/${this.textContent}.png`
-                computerHand.src = `./assets/${computerChoice}.png`
+                    playerHand.src = `./assets/${this.textContent}.png`
+                    computerHand.src = `./assets/${computerChoice}.png`
+                }, 2000)
 
+                //ANIMATION of hands
                 playerHand.style.animation = "shakePlayer 2s ease";
                 computerHand.style.animation = "shakeComputer 2s ease";
             })

@@ -31,7 +31,7 @@ const game = () => {
                 const computerChoice = computerOptions[computerNumber]
                 console.log(computerChoice)
                 //we will call the comparing hands to see who actually won the game
-                compareHands();
+                compareHands(this.textContent, computerChoice);
 
                 //updating the images so it looks like the choice you got
                 playerHand.src = `./assets/${this.textContent}.png`
@@ -39,6 +39,15 @@ const game = () => {
             })
         });
     };
+
+
+    const updateScore = () => {
+        const playerScore = document.querySelector(".player-score p")
+        const computerScore = document.querySelector(".computer-score p")
+
+        playerScore.textContent = pScore;
+        computerScore.textContent = cScore;
+    }
 
     const compareHands = (playerChoice, computerChoice) => {
         //this will update text when a player wins or loses
@@ -53,9 +62,13 @@ const game = () => {
         if(playerChoice === 'rock') {
             if (computerChoice === 'scissors') {
                 winner.textContent = "Player Wins!";
+                pScore++;
+                updateScore();
                 return;
             } else {
                 winner.textContent = "Computer Wins";
+                cScore++;
+                updateScore();
                 return
             }
         }
@@ -63,9 +76,13 @@ const game = () => {
         if(playerChoice === 'paper') {
             if (computerChoice === 'scissors') {
                 winner.textContent = "Computer Wins!";
+                cScore++;
+                updateScore();
                 return;
             } else {
                 winner.textContent = "Player Wins";
+                pScore++;
+                updateScore();
                 return
             }
         }
@@ -73,14 +90,19 @@ const game = () => {
         if(playerChoice === 'scissors') {
             if (computerChoice === 'rock') {
                 winner.textContent = "Computer Wins!";
+                cScore++;
+                updateScore();
                 return;
             } else {
                 winner.textContent = "Player Wins";
+                pScore++;
+                updateScore();
                 return
             }
         }
     }
 
+    
 
     //calls all the inner functions
     startGame();

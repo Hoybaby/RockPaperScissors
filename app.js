@@ -27,13 +27,34 @@ const game = () => {
 
         options.forEach(option => {
             option.addEventListener('click', function() {
-                console.log(this);
+                const computerNumber = Math.floor(Math.random() * 3);
+                const computerChoice = computerOptions[computerNumber]
+                console.log(computerChoice)
+                //we will call the comparing hands to see who actually won the game
             })
         });
-
-        const computerNumber = Math.floor(Math.random() * 3);
-        
     };
+
+    const compareHands = (playerChoice, computerChoice) => {
+        //this will update text when a player wins or loses
+        const winner = document.querySelector('.winner');
+
+        //checks for a tie
+        if( playerChoice === computerChoice) {
+            winner.textContent = 'It is a tie';
+            return;
+        }
+        //check if player has a rock choice
+        if(playerChoice === 'rock') {
+            if (computerChoice === 'scissors') {
+                winner.textContent = "Player Wins!";
+                return;
+            } else {
+                winner.textContent = "Computer Wins";
+                return
+            }
+        }
+    }
 
 
     //calls all the inner functions

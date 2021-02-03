@@ -21,6 +21,13 @@ const game = () => {
         const options = document.querySelectorAll('.options button') //this will grab all the buttons from the options class on line 40
         const playerHand = document.querySelector('.player-hand');
         const computerHand = document.querySelector('.computer-hand');
+        const hands = document.querySelectorAll('.hands img');
+
+        hands.forEach(hand => {
+            hand.addEventListener('animationed', function() { // normal function because i want access to this
+                this.style.animation=''; //every time the animation ends this will run which will reset it and make it so every click it does the animation after.
+            })
+        })
 
         //computer Hands/choices to fight against player
         const computerOptions = ["rock", "paper", "scissors"];

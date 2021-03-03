@@ -1,5 +1,3 @@
-
-
 //this will host it all
 const game = () => {
     let pScore = 0;

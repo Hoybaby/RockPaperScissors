@@ -23,7 +23,7 @@ Packages required to run this program are: No packages need to be installed.
 
 
 ## Usage
-Examples of how to use this program: https://github.com/Hoybaby/RockPaperScissors
+Examples of how to use this program: https://hoybaby.github.io/RockPaperScissors/
 
 
 ## License
